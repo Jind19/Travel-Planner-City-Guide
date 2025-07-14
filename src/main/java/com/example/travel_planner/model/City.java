@@ -24,7 +24,7 @@ public class City {
     /** Current weather description fetched from OpenWeather. */
     private String weatherDescription;
 
-    /** Current temperature in Celsius fetched from  OpenWeather.*/
+    /** Current temperature in Celsius fetched from OpenWeather.*/
     private double temperature;
 
     public City() {
