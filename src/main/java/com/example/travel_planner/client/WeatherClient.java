@@ -23,10 +23,15 @@ public class WeatherClient {
     @Value("${openweather.api.url}")
     private String apiUrl;
 
+    /**
+     * Constructor with dependency injection.
+     *
+     * @param restTemplate Spring-injected RestTemplate
+     */
     @Autowired
-    public WeatherClient(RestTemplate restTemplate, ObjectMapper objectMapper) {
+    public WeatherClient(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
-        this.objectMapper = objectMapper;
+        this.objectMapper = new ObjectMapper();
     }
 
 
