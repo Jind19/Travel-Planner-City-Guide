@@ -37,6 +37,7 @@ public class WeatherClient {
      * @return WeatherInfo containing description and temperature
      */
     public WeatherInfo getWeatherForCity(String cityName) {
+
         String url = String.format("%s?q=%s&appid=%s&units=metric", apiUrl, cityName, apiKey);
 
         try {
@@ -50,6 +51,7 @@ public class WeatherClient {
              * @return the response body as a plain String
              */
             String response = restTemplate.getForObject(url, String.class);
+
             /**
              * Parses the JSON response String into a Jackson JsonNode tree.
              *
