@@ -1,0 +1,8 @@
+services:
+  travel_planner:
+    image: weatherapp
+    container_name: travel_planner_app
+    ports:
+      - "6065:6065"
+    env_file:
+      - .env
